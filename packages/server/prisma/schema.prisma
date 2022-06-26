@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+ provider = "typegraphql-prisma"
+ emitTranspileCode = true
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  username String @db.VarChar(30) @unique
+  email    String @db.VarChar(100) @unique
+  password String @db.VarChar(255)
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+}
