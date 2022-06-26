@@ -6,12 +6,16 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 import { HelloResolver, UserResolver } from "./resolvers";
 import { PrismaClient } from "@prisma/client";
 import { MyContext } from "./context";
+import cookieParser from "cookie-parser";
 
 const main = async () => {
   const app = express();
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+  app.use(cookieParser());
+
+  app.post("/refresh-token", (req, res) => {});
 
   const prisma = new PrismaClient();
 

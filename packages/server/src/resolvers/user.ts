@@ -46,7 +46,7 @@ class JwtToken {
   @Field()
   accessToken?: string;
 
-  @Field()
+  @Field(() => String, { nullable: true })
   refreshToken?: string;
 }
 
@@ -174,6 +174,7 @@ export class UserResolver {
     });
 
     return {
+      user,
       token: {
         accessToken: createAccessToken(user),
       },

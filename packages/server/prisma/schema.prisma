@@ -6,8 +6,8 @@ generator client {
 }
 
 generator typegraphql {
- provider = "typegraphql-prisma"
- emitTranspileCode = true
+  provider          = "typegraphql-prisma"
+  emitTranspileCode = true
 }
 
 datasource db {
@@ -16,10 +16,11 @@ datasource db {
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
-  username String @db.VarChar(30) @unique
-  email    String @db.VarChar(100) @unique
-  password String @db.VarChar(255)
-  createAt DateTime @default(now())
-  updateAt DateTime @updatedAt
+  id           Int      @id @default(autoincrement())
+  username     String   @unique @db.VarChar(30)
+  email        String   @unique @db.VarChar(100)
+  password     String   @db.VarChar(255)
+  tokenVersion Int      @default(0)
+  createAt     DateTime @default(now())
+  updateAt     DateTime @updatedAt
 }

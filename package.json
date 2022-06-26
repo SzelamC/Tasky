@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "private" : true,
-  "workspaces": ["packages/*"],
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "client:dev": "yarn workspace client start",
     "server:dev": "yarn workspace server start",

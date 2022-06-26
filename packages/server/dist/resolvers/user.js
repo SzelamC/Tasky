@@ -67,7 +67,7 @@ __decorate([
     __metadata("design:type", String)
 ], JwtToken.prototype, "accessToken", void 0);
 __decorate([
-    (0, type_graphql_1.Field)(),
+    (0, type_graphql_1.Field)(() => String, { nullable: true }),
     __metadata("design:type", String)
 ], JwtToken.prototype, "refreshToken", void 0);
 JwtToken = __decorate([
@@ -183,6 +183,7 @@ let UserResolver = class UserResolver {
             httpOnly: true,
         });
         return {
+            user,
             token: {
                 accessToken: (0, auth_1.createAccessToken)(user),
             },
