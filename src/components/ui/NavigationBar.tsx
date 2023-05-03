@@ -39,7 +39,7 @@ function NavigationLink({ href, children, className }: NavigationLinkProps) {
 
 export default function NavigationBar() {
   return (
-    <nav className="fixed top-0 w-full p-4 shadow-[0_4px_8px_0] shadow-slate-200">
+    <nav className="fixed top-0 w-full bg-white p-4 shadow-[0_4px_8px_0] shadow-slate-200">
       <div className="mx-auto flex max-w-3xl items-center justify-between md:max-w-5xl lg:max-w-7xl">
         <TaskyLogoIcon />
         <div className="flex items-center gap-10">
