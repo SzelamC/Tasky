@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mx-auto mt-20 flex min-h-[760px] max-w-7xl items-center">
-      <div className="grid w-full grid-cols-2">
+    <main className="mx-auto mt-20 flex min-h-[760px] max-w-7xl items-center p-4 ">
+      <div className="grid w-full grid-cols-1 md:grid-cols-2">
         <div>
           <h1 className="text-5xl text-green-400">Tasky</h1>
           <h1 className="text-5xl text-green-400">Manage your task easily</h1>

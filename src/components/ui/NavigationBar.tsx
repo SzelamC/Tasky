@@ -8,9 +8,9 @@ function TaskyLogoIcon() {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width={32}>
         <defs>
           <linearGradient id="icon_gradient" gradientTransform="rotate(90)">
-            <stop offset="0%" stop-color="#aeff4c" />
-            <stop offset="52%" stop-color="#53ebe3" />
-            <stop offset="100%" stop-color="#4ade80" />
+            <stop offset="0%" stopColor="#aeff4c" />
+            <stop offset="52%" stopColor="#53ebe3" />
+            <stop offset="100%" stopColor="#4ade80" />
           </linearGradient>
         </defs>
         <path
@@ -40,10 +40,10 @@ function NavigationLink({ href, children, className }: NavigationLinkProps) {
 export default function NavigationBar() {
   return (
     <nav className="fixed top-0 w-full p-4 shadow-[0_4px_8px_0] shadow-slate-200">
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
+      <div className="mx-auto flex max-w-3xl items-center justify-between md:max-w-5xl lg:max-w-7xl">
         <TaskyLogoIcon />
         <div className="flex items-center gap-10">
-          <ul className="flex items-center gap-6 text-sm text-gray-600">
+          <ul className="hidden items-center gap-6 text-sm text-gray-600 sm:flex">
             <li>
               <NavigationLink
                 href="#"
@@ -66,6 +66,22 @@ export default function NavigationBar() {
               </Button>
             </li>
           </ul>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 16 16"
+            className="block sm:hidden"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+            ></path>
+          </svg>
         </div>
       </div>
     </nav>
