@@ -71,7 +71,7 @@ export default function LoginPage() {
             emailInputRef.current?.focus();
           }}
         />
-        <div className="rounded-md border border-gray-200 p-4 shadow-sm">
+        <form className="rounded-md border border-gray-200 p-4 shadow-sm">
           <SimpleInput
             label="Email"
             placeholder="Enter here..."
@@ -83,8 +83,10 @@ export default function LoginPage() {
             placeholder="Enter here..."
             variant="primary"
           />
-          <Button variant="primary">Sign in</Button>
-        </div>
+          <Button type="submit" variant="primary">
+            Sign in
+          </Button>
+        </form>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
-import { HTMLAttributes, forwardRef } from "react";
+import { ButtonHTMLAttributes, HTMLAttributes, forwardRef } from "react";
 
 const buttonVariants = cva(
   "inline-flex gap-2 w-full items-center justify-center rounded-lg",
@@ -26,7 +26,7 @@ const buttonVariants = cva(
   }
 );
 
-type ButtonProps = HTMLAttributes<HTMLButtonElement> &
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     color?: string;
     children: React.ReactNode;

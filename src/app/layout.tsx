@@ -1,8 +1,8 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'Tasky',
-  description: 'Manage your task easily',
+  title: "Tasky",
+  description: "Manage your task easily",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className="absolute w-0 h-0"
+          className="absolute h-0 w-0"
         >
           <symbol id="tasky_logo">
             {/* <defs>
