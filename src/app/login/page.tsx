@@ -1,9 +1,10 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import SimpleInput from "@/components/ui/SimpleInput";
+import Button from "@ui/Button";
+import SimpleInput from "@ui/SimpleInput";
 import { useRef } from "react";
 
+// Login page upper icon
 function LoginPageIcon() {
   return (
     <div>
@@ -26,6 +27,7 @@ function LoginPageIcon() {
   );
 }
 
+// Simple divide between sso login and email login
 function Divide(props: { focusEmail: () => void }) {
   return (
     <div className="flex items-center justify-between">
@@ -42,6 +44,7 @@ function Divide(props: { focusEmail: () => void }) {
   );
 }
 
+// simple wrapper for github icon
 function GithubIcon() {
   return (
     <svg
