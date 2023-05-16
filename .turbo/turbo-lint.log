@@ -1,0 +1,6 @@
+
+> tasky@0.1.0 lint /Users/szelc/dev/tasky
+> next lint
+
+- info Loaded env from /Users/szelc/dev/tasky/.env
+✔ No ESLint warnings or errors

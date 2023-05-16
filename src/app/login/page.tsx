@@ -2,7 +2,7 @@
 
 import Button from "@ui/Button";
 import SimpleInput from "@ui/SimpleInput";
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 
 // Login page upper icon
 function LoginPageIcon() {
@@ -59,6 +59,7 @@ function GithubIcon() {
 
 export default function LoginPage() {
   const emailInputRef = useRef<HTMLInputElement>(null);
+  const passwordInputRef = useRef<HTMLInputElement>(null);
 
   return (
     <div className="mx-auto my-16 flex max-h-fit max-w-sm flex-col gap-4 text-center">
@@ -80,11 +81,14 @@ export default function LoginPage() {
             placeholder="Enter here..."
             variant="primary"
             ref={emailInputRef}
+            type="email"
           />
           <SimpleInput
             label="Password"
             placeholder="Enter here..."
             variant="primary"
+            ref={passwordInputRef}
+            type="password"
           />
           <Button type="submit" variant="primary">
             Sign in
