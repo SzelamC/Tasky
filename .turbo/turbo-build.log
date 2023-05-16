@@ -1,0 +1,35 @@
+
+> tasky@0.1.0 build /Users/szelc/dev/tasky
+> next build
+
+- info Loaded env from /Users/szelc/dev/tasky/.env
+- info Creating an optimized production build...
+- info Compiled successfully
+- info Linting and checking validity of types...
+- info Collecting page data...
+- info Generating static pages (0/5)
+- info Generating static pages (1/5)
+- info Generating static pages (2/5)
+- info Generating static pages (3/5)
+- info Generating static pages (5/5)
+- info Finalizing page optimization...
+
+Route (app)                                Size     First Load JS
+┌ ○ /                                      0 B                0 B
+├ ○ /favicon.ico                           0 B                0 B
+└ ○ /login                                 2.17 kB        86.3 kB
++ First Load JS shared by all              76.8 kB
+  ├ chunks/139-3b1cc292c4171f8a.js         24.4 kB
+  ├ chunks/2443530c-80a563eb28b2cb52.js    50.5 kB
+  ├ chunks/main-app-4d4444d0d9e7f5a0.js    211 B
+  └ chunks/webpack-9385c29e1dd32996.js     1.67 kB
+
+Route (pages)                              Size     First Load JS
+─ ○ /404                                   178 B            86 kB
++ First Load JS shared by all              85.8 kB
+  ├ chunks/main-409ceb0d9eb82d48.js        83.9 kB
+  ├ chunks/pages/_app-c544d6df833bfd4a.js  192 B
+  └ chunks/webpack-9385c29e1dd32996.js     1.67 kB
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+

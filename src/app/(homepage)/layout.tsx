@@ -1,4 +1,4 @@
-import NavigationBar from '@/components/ui/NavigationBar';
+import NavigationBar from "@/components/ui/NavigationBar";
 
 export default function RootLayout({
   children,
@@ -6,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen bg-homepage-pattern bg-cover bg-fixed bg-center bg-no-repeat flex flex-col">
+    <div className="flex h-screen flex-col bg-homepage-pattern bg-cover bg-fixed bg-center bg-no-repeat">
       <NavigationBar />
       {children}
     </div>

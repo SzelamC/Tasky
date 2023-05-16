@@ -1,9 +1,10 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import SimpleInput from "@/components/ui/SimpleInput";
-import { useRef } from "react";
+import Button from "@ui/Button";
+import SimpleInput from "@ui/SimpleInput";
+import { FormEvent, useRef } from "react";
 
+// Login page upper icon
 function LoginPageIcon() {
   return (
     <div>
@@ -26,6 +27,7 @@ function LoginPageIcon() {
   );
 }
 
+// Simple divide between sso login and email login
 function Divide(props: { focusEmail: () => void }) {
   return (
     <div className="flex items-center justify-between">
@@ -42,6 +44,7 @@ function Divide(props: { focusEmail: () => void }) {
   );
 }
 
+// simple wrapper for github icon
 function GithubIcon() {
   return (
     <svg
@@ -56,6 +59,7 @@ function GithubIcon() {
 
 export default function LoginPage() {
   const emailInputRef = useRef<HTMLInputElement>(null);
+  const passwordInputRef = useRef<HTMLInputElement>(null);
 
   return (
     <div className="mx-auto my-16 flex max-h-fit max-w-sm flex-col gap-4 text-center">
@@ -77,11 +81,14 @@ export default function LoginPage() {
             placeholder="Enter here..."
             variant="primary"
             ref={emailInputRef}
+            type="email"
           />
           <SimpleInput
             label="Password"
             placeholder="Enter here..."
             variant="primary"
+            ref={passwordInputRef}
+            type="password"
           />
           <Button type="submit" variant="primary">
             Sign in
